@@ -1,0 +1,284 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway' !important;
+}
+i { font-family: "Font Awesome 5 Free" !important; }
+
+#main-wraper {
+    padding: 10px 0px;
+    position: relative;
+}
+
+#main-wraper .main-wraper-inner {
+    padding: 10% 0px;
+}
+
+#nav-logo-img {
+    padding: 0.7rem;
+    box-shadow: 2px 2px 6px rgba(200, 160, 200, 0.4) !important;
+    border-radius: 50% !important;
+    height: 64px;
+}
+
+.particle {
+    background: radial-gradient(#0e141b 0%, #090a0f 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    padding: 0px !important;
+    margin: 0px 10px;
+}
+
+.navbar .nav-link::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #22d1dd;
+    left: 0%;
+    bottom: -6px;
+    /*transform: translate(-50%, 0px);*/
+    transition: width linear .3s;
+}
+
+.navbar .nav-link:hover:after {
+    width: 100%;
+    transition: width linear .5s;
+}
+
+.overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+}
+
+.overlay p {
+    font-size: 25px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.overlay .small-text {
+    font-size: 20px;
+}
+
+.overlay .btn-home {
+    padding: 4px 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #e2c636;
+    color: #241403;
+}
+
+#Carousel {
+    background-color: #000000;
+    padding: 50px 0px;
+}
+#Carousel .owl-carousel {
+    height: auto;
+}
+
+.owl-prev, .owl-next {
+    background-color: transparent !important;
+    top: 50%;
+    position: absolute;
+    color: white !important;
+    outline: none !important;
+    transform: translate(0px, -50%);
+}
+
+.owl-prev {
+    left: 0px;
+}
+
+.owl-next {
+    right: 0px;
+}
+
+.owl-prev span, .owl-next span {
+    background-color: transparent !important;
+    font-size: 50px;
+    font-weight: 500;
+}
+#features {
+    background-color: #FFFFFF;
+    padding: 50px 0px;
+    width: 100%;
+    text-align: center; 
+}
+.features-inner h2, #Introducing .overlay h2, #Testimonials h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #19a7be;
+}
+.features-inner p { color: #19a7be; }
+.features-inner .box {
+    padding: 20px;
+    border: 1px solid #19a7be;
+    border-radius: 12px;
+    height: 100%;
+    transition: all linear .3s;
+}
+.features-inner .box:hover {
+    transform: scale(1.06);
+}
+
+.features-inner .box h5 {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #19a7be;
+    align-items: center;
+}
+.features-inner .box h5 i {
+    margin-right: 20px;
+}
+.features-inner .box p ,#Introducing .iso-img p{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: #19a7be;
+}
+#Introducing {
+    background-color: #000000;
+    padding: 50px 0px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#Introducing .overlay h2 {
+    color: #FFFFFF;
+}
+#Introducing .iso-img p, #Introducing .iso-app p {
+    color: #FFFFFF;
+    margin-top: 30px;
+    font-size: 17px;
+}
+#Introducing .iso-app p {
+    color: #FFFFFF;
+    font-size: 23px;
+    text-align: left;
+}
+#Testimonials {
+    background-color: #FFFFFF;
+    padding: 50px 0px;
+    width: 100%;
+}
+
+
+/*******************************
+* ACCORDION WITH TOGGLE ICONS
+* Does not work properly if "in" is added after "collapse".
+*******************************/
+.panel-group .panel {
+    border-radius: 10px;
+    box-shadow: none;
+    border-color: #EEEEEE;
+    padding: 0px 20px;
+    background-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+}
+
+.panel-title {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.panel-title > a {
+    display: block;
+    padding: 15px 0px;
+    text-decoration: none;
+    color: #19a7be;
+    font-weight: 500;
+    font-size: 18px;
+}
+.panel-body {
+    color: #19a7be;
+    font-size: 15px;
+}
+
+.more-less {
+    float: right;
+}
+.panel-collapse {
+    padding-bottom: 20px;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+
+
+
+
+@media (max-width: 991px) {
+    #main-wraper { padding: 0px 0px; }
+    #features, #Carousel, #Introducing, #Testimonials { padding: 30px 0px; }
+    .navbar-toggler { outline: none !important; border: none !important; box-shadow: none !important;}
+    #navbarSupportedContent { background-color: #FFFFFF; padding: 20px 10px; }
+    #navbarSupportedContent .nav-link { color: #0a0c0d; line-height: 1.7; }
+    #navbarSupportedContent .nav-link::after { display: none }
+    .overlay h1 { font-size: 50px }
+    #main-wraper .main-wraper-inner { padding: 8% 0px; }
+    .overlay p { font-size: 20px; }
+    .overlay .small-text { font-size: 16px; }
+    .features-inner .box { margin-bottom: 30px; height: auto }
+    .features-inner h2, #Introducing .overlay h2, #Testimonials h2 { font-size: 40px; letter-spacing: 1px }
+    #Introducing .iso-app p { margin: 5px 0px; }
+    .panel-group .panel { margin-bottom: 20px; }
+    #Testimonials h2 { margin-bottom: 30px; }
+
+@media screen and (max-width: 768px) {
+    .features-inner .box:hover { transform: scale(1.03); }
+    .iso-img { margin-top: 20px; }
+}
+}
+
+@media screen and (max-width: 500px) {
+    .features-inner h2, #Introducing .overlay h2, #Testimonials h2,.overlay h1 { font-size: 25px; letter-spacing: 0px;}
+    #features, #Carousel, #Introducing, #Testimonials { padding: 20px 0px; }
+    #main-wraper .main-wraper-inner {padding: 8% 15px;}
+    #Introducing .iso-app p, .overlay p { font-size: 16px; margin-bottom: 20px; }
+    .overlay .small-text {font-size: 12px;}
+}

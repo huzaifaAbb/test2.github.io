@@ -1,0 +1,84 @@
+body {
+  background-color: #171941;
+}
+
+.container nav {
+  background-color: transparent;
+}
+
+.container nav ul li {
+  list-style: none;
+}
+
+.container h1, .container p {
+  text-align: center;
+  color: whitesmoke;
+  margin: 2rem;
+  font-size: 4.5rem;
+}
+
+.container p {
+  font-size: 2rem;
+}
+
+.container p img {
+  height: 32px;
+  vertical-align: inherit;
+}
+
+.container .wallet {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+}
+
+.container .wallet img {
+  width: 4rem;
+}
+
+.container .wallet p {
+  margin: auto 2rem;
+}
+
+.container .card {
+  background-color: transparent;
+  border: none;
+}
+
+.container .store-balance, .container .store-balance .card-img-top {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container .store-balance .card-body img {
+  height: 30px;
+  vertical-align: inherit;
+}
+
+.container .card-group h5 {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.container .card-group .card {
+  margin: 0.5rem;
+}
+
+.container .card-group .card img {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  .container h1, .container p {
+    font-size: 2.5rem;
+  }
+  .container p {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=shop.css.map */

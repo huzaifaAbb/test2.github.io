@@ -1,0 +1,135 @@
+.terms-wrapper {
+  display: block;
+
+  .terms-container {
+    margin-bottom: 10rem;
+
+    #terms-img {
+      width: 100%;
+      text-align: center;
+      display: block;
+
+      img {
+        width: 50%;
+        border-radius: 20px;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .container {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    h4 {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    ol {
+      list-style-type: lower-alpha;
+    }
+  }
+}
+
+.page-header {
+  // background-image: url(../img/elixir/landing-background.png);
+  // background-size: cover;
+  max-height: 100%;
+  height: max-content;
+  overflow: visible;
+  margin-bottom: auto;
+}
+
+@media screen and (max-height: 880px) and (min-height: 681px) {
+  #about-us {
+    // top: 0;
+    margin-top: 10rem;
+
+    #landing-section {
+      .col-lg-12,
+      .col-md-12 {
+        margin-top: 7rem;
+      }
+    }
+  }
+
+  #features {
+    margin-top: 13rem;
+  }
+}
+
+@media screen and (max-height: 680px) and (min-height: 581px) {
+  #about-us {
+    // top: 0;
+
+    #landing-section {
+      .col-lg-12,
+      .col-md-12 {
+        margin-top: 15rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .carousel {
+    display: none;
+  }
+
+  #about-us {
+    #landing-section {
+      .col-lg-12,
+      .col-md-12 {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #about-us {
+    margin-top: 3.5rem;
+  }
+
+  #landing-section {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  #about-us {
+    margin-top: 7rem;
+  }
+
+  #landing-section {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #landing-section {
+    margin-top: 1rem;
+  }
+}
+
+// @media screen and (min-height: 580px) {
+//   #about-us {
+//     top: 0;
+
+//     #landing-section {
+//       .col-lg-12,
+//       .col-md-12 {
+//         margin-top: 25rem;
+//       }
+//     }
+//   }
+// }

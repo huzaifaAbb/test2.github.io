@@ -1,0 +1,95 @@
+$navy: #171941;
+
+body {
+  background-color: $navy;
+}
+
+.container {
+  nav {
+    background-color: transparent;
+
+    ul li {
+      list-style: none;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: whitesmoke;
+    margin: 2rem;
+    font-size: 4.5rem;
+  }
+
+  p {
+    @extend h1;
+    font-size: 2rem;
+
+    img {
+      height: 32px;
+      vertical-align: inherit;
+    }
+  }
+
+  .wallet {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+
+    img {
+      width: 4rem;
+    }
+
+    p {
+      margin: auto 2rem;
+    }
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+  }
+
+  .store-balance {
+    width: 50%;
+    margin: 0 auto;
+
+    .card-img-top {
+      @extend .store-balance;
+    }
+
+    .card-body {
+      img {
+        height: 30px;
+        vertical-align: inherit;
+      }
+    }
+  }
+
+  .card-group {
+    h5 {
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    .card {
+      margin: 0.5rem;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
