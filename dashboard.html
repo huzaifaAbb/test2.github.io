@@ -1,0 +1,334 @@
+<!--
+=========================================================
+* BLK Design System- v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/blk-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168661332-1');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="./assets/img/elixir/16-x-16.png" />
+  <title>
+    Elixir Labs
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+
+  <!-- ***** CSS Files ***** -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="/assets/vendor/nucleo/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+
+  <!-- Theme CSS -->
+  <link type="text/css" href="/assets/css/blk-design-system.min.css" rel="stylesheet" />
+
+  <link href="./assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+</head>
+
+<body class="index-page loaded">
+  <!-- Navbar -->
+  <nav class="navbar navbar-fixed-top navbar-expand-lg fixed-top" id="nav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#about-us" id="nav-logo">
+          <img class="img-fluid rounded-circle shadow-lg" src="./assets/img/elixir/Elixir_Labs_Logo.svg" rel="tooltip"
+            id="nav-logo-img" />
+        </a>
+        <button id="nav-toggler" class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-12 collapse-close text-right">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation"
+                id="nav-close-button">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <button type="button" class="btn-simple" rel="tooltip" title="About Us" style="border: none;">
+            <li class="nav-item">
+              <a class="nav-link btn btn-default d-none d-lg-block" href="./index.html">
+                <i class="tim-icons icon-minimal-left"></i> Home
+              </a>
+            </li>
+          </button>
+
+          <li class="nav-item">
+            <div id="membership-display">
+              <label>Membership Type:</label>
+              <br />
+              <label id="membership-type"></label>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a id="logout" class="nav-link btn btn-default d-none d-lg-block">
+              <i class="tim-icons icon-simple-remove"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Main Wrapper -->
+  <div class="wrapper" style="position: relative; top: 10em;">
+    <!-- Dashboard -->
+    <div class="container">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square4"></div>
+      <div class="squares square5"></div>
+      <div class="squares square6"></div>
+      <div class="squares square7"></div>
+      <div class="row">
+        <!-- Personal Information -->
+        <div class="col dashboard-card">
+          <div class="content-center custom-card">
+            <img id="discord-profile-img" src="./assets/img/elixir/elixir2.svg" alt="discord profile picture"
+              class="img-fluid rounded-circle shadow-lg discord-profile-img" style="width: 6em;" />
+            <br /><br />
+            <label>Discord Username:
+              <div id="discord-username"></div></label><br />
+            <label>
+              <form id="save-email-form" action="">
+                Email:
+                <div id="user-email"></div>
+                <div>
+                  <input id="user-email-input" style="display: none;" class="my-1" placeholder="Enter your email"
+                    value="" type="email" required />
+                </div>
+              </form>
+            </label><br />
+            <label>
+              <form id="save-phone-form" action="">
+                Phone Number:
+                <div id="phone-number"></div>
+                <div>
+                  <input id="phone-number-input" style="display: none;" class="my-1" placeholder="Enter your phone"
+                    value="" type="number" required />
+                </div>
+                <button id="editPhone" saveBtn="save-phone" class="edit-btn btn btn-default btn-sm"
+                  target1="phone-number" target2="phone-number-input">
+                  Edit
+                </button>
+                <button disabled id="save-phone" class="btn btn-default btn-sm">Save</button>
+              </form>
+            </label><br />
+            <label>Key:
+              <div id="license-key">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</div></label><br />
+            <label>Stripe ID:
+              <div id="strip-id">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</div></label><br />
+            <label>Subscription Status :
+              <div class="text-uppercase" id="sub-status"></div></label><br /><br />
+            <button id="join-discord" class="btn btn-sm discord-button">
+              <i class="fab fa-discord"></i> Join Discord
+            </button>
+          </div>
+        </div>
+        <!-- End Personal Information -->
+
+        <!-- Payment Information -->
+        <div class="col dashboard-card">
+          <div class="content-center custom-card" id="dashboard-payment">
+            <h4>Payment Information</h4>
+            <br />
+            <form id="card-form">
+              <input class="input-card-disabled" disabled type="text" id="cc-number" name="cc-number"
+                placeholder="Card Number" /><br /><br />
+              <input class="input-card-disabled" disabled type="text" id="cc-expiry" name="cc-expiry"
+                placeholder="MM/YY" />
+              <input class="input-card-disabled" disabled type="text" id="cc-cvv" name="cc-cvv" placeholder="CCV" />
+              <div style="display: none;" id="card-element"></div>
+              <br /><br />
+              <a id="edit-card" class="nav-link btn btn-default d-lg-block" href="#">
+                Edit <i class="tim-icons icon-pencil"></i>
+              </a>
+              <button disabled id="saveBtnC" class="nav-link btn btn-default d-lg-block" href="#">
+                Save <i class="tim-icons icon-check-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- End Payment Information -->
+      </div>
+      <div class="row">
+        <!-- Download Links -->
+        <div class="col dashboard-card" id="download-links">
+          <div class="content-center custom-card">
+            <div class="download-links-section">
+              <div id="autofill" class="download-links download-file">
+                <label for="">Autofill Tool</label>
+                <a href="#">
+                  <img src="./assets/img/elixir/code.svg" alt="autofill download link" class="img-fluid rounded"
+                    style="width: 6em;" />
+                </a>
+              </div>
+              <div class="download-links autoCheckout">
+                <label for="">AutoCheckout</label>
+                <a style="cursor: pointer;" target="_blank">
+                  <img src="./assets/img/elixir/shoes.svg" alt="autofill download link" class="img-fluid rounded"
+                    style="width: 6em;" />
+                </a>
+              </div>
+              <div id="discordtools" class="download-links download-file">
+                <label for="">Discord Tool</label>
+                <a href="#">
+                  <img src="./assets/img/elixir/code.svg" alt="autofill download link" class="img-fluid rounded"
+                    style="width: 6em;" />
+                </a>
+              </div>
+              <div id="store-link" class="download-links download-file">
+                <label for="">Success Store</label>
+                <a href="https://elixirlabs.xyz/shop">
+                  <img src="./assets/img/elixir/wallet.svg" alt="autofill download link" class="img-fluid rounded"
+                    style="width: 6em;" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Download Links -->
+
+        <!-- Support -->
+        <div class="col dashboard-card support-card" id="dashboard-support">
+          <div class="content-center custom-card">
+            <label>Support</label>
+            <div class="support-section">
+              <div class="row">
+                <div class="support-links">
+                  <a href="https://twitter.com/Elixir_IO" target="_blank">
+                    <img src="./assets/img/elixir/twitter.svg" alt="autofill download link"
+                      class="img-fluid rounded shadow-lg" style="width: 5em;" />
+                  </a>
+                </div>
+                <div class="support-links">
+                  <a href="https://www.instagram.com/Elixir_IO/" target="_blank">
+                    <img src="./assets/img/elixir/instagram.svg" alt="autofill download link"
+                      class="img-fluid rounded shadow-lg" style="width: 5em;" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a class="nav-link btn btn-default d-none d-lg-block"
+              href="https://discordapp.com/channels/470642866142838785/685524871718895697/686106251322720307"
+              target="_blank">
+              Submit a ticket <i class="tim-icons icon-chat-33"></i>
+            </a>
+          </div>
+        </div>
+        <!-- End Support -->
+      </div>
+    </div>
+    <!-- End Dashboard -->
+  </div>
+  <!-- End Main Wrapper -->
+
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+
+  <script>
+    $('html').click(function () {
+      if ($('#nav-toggler').hasClass('show')) {
+        console.log('html clicked');
+        $('#navigation').toggle();
+        $('#nav-toggler').removeClass('show');
+      }
+    });
+  </script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Theme JS -->
+  <script src="/assets/js/blk-design-system.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: https://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: https://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!-- Chart JS -->
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+  <script>
+    $(document).ready(function () {
+      blackKit.initDatePicker();
+      blackKit.initSliders();
+    });
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $('html, body').animate(
+          {
+            scrollTop: $('.section-download').offset().top,
+          },
+          1000
+        );
+      }
+    }
+  </script>
+
+  <!-- ***** Stripe ***** -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="./services/stripe.js" type="text/javascript"></script>
+
+  <!-- ***** Sweet Alert ***** -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <!--   API SERVICES   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js " type="text/javascript"></script>
+  <script src="./services/env.js" type="text/javascript"></script>
+  <script src="./services/paths.js" type="text/javascript"></script>
+  <script src="./services/alerts.js" type="text/javascript"></script>
+  <script src="./services/cookieService.js" type="text/javascript"></script>
+  <script src="./services/apiService.js" type="text/javascript"></script>
+  <script src="./services/main.js" type="text/javascript"></script>
+  <script src="./services/stripeDash.js" type="text/javascript"></script>
+
+  <!--   END API SERVICES   -->
+</body>
+
+</html>

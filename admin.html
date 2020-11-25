@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168661332-1');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="./assets/img/elixir/16-x-16.png" />
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+
+  <!-- ***** CSS Files ***** -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="/assets/vendor/nucleo/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+
+  <!-- Theme CSS -->
+  <link type="text/css" href="/assets/css/blk-design-system.min.css" rel="stylesheet" />
+  <link href="./assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+
+  <!-- Scroll Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- ***** Data Table ***** -->
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" />
+
+  <title>Admin Panel</title>
+</head>
+
+<body class="index-page">
+  <!-- Main Wrapper -->
+  <div class="wrapper">
+    <!-- Admin Panel -->
+    <div class="page-header">
+      <div class="container" data-aos="fade-up" data-aos-delay="" data-aos-duration="1000"
+        data-aos-easing="ease-in-out-cubic">
+        <div class="admin-wrapper">
+          <div class="testimonial-cards">
+            <div class="col-lg-12 col-md-12">
+              <!-- KEY GENERATION -->
+              <h2>Generate Key</h2>
+              <div class="keygen">
+                <select id="key-type">
+                  <option value="Lifetime">Lifetime</option>
+                  <option value="F&F">F&F</option>
+                  <option value="Staff key">Staff key</option>
+                </select>
+                <br />
+                <a target="_blank" class="btn btn-default" href="http://panel.elixirlabs.xyz/">Go To Reviewer
+                  Panel</a>
+                <button id="logout" class="btn btn-default" btn btn-default">Logout</a>
+
+                  <button id="keyGenBtn" class="keygen-button btn btn-default">Generate</button>
+                  <br /><br />
+                  <input disabled class="keygen-field" type="text" name="generated-key" id="generated-key"
+                    placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" />
+              </div>
+              <!-- END KEY GENERATION -->
+
+              <!-- UNDER CONSTRUCTION MODE -->
+              <h2 class="mt-5">Under Construction Mode</h2>
+              <div class="keygen mb-5">
+                <input id="toggle-event" value="true" type="checkbox" data-toggle="toggle" />
+              </div>
+              <!-- UNDER CONSTRUCTION MODE -->
+
+              <br />
+              <!-- USER MANAGEMENT -->
+              <h2>Manage Users</h2>
+              <div class="manage-users">
+                <table id="admin-table" class="table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">ID</th>
+                      <th>Discord</th>
+                      <th>Email</th>
+                      <th>Membership Type</th>
+                      <th>Key</th>
+                      <th>Active</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <!-- USER MANAGEMENT -->
+              <br />
+              <h2>Stock Manager</h2>
+              <!-- KEY STOCK FIGURES DISPLAY -->
+              <div class="stock-count">
+                <div>
+                  <label for="">Total Monthly Key's Sold:</label>
+                  <label id="total-keys" for="">xxx</label>
+                  <br />
+                  <label for="">Currently Live Renewal Keys:</label>
+                  <label id="keys-alive" for="">xxx</label>
+                  <br />
+                  <br />
+                  <label for="">Public Stock:</label>
+                  <label for=""><span id="public-stock-used">xxx</span>/<input type="number" value="0"
+                      id="public-stock"></span></label>
+                  <br />
+                  <button id="add-public" type="button" rel="tooltip" class="btn btn-default btn-sm btn-icon"
+                    title="Add Stock">
+                    <i class="tim-icons icon-simple-add"></i>
+                  </button>
+                  <button id="subtract-public" type="button" rel="tooltip" class="btn btn-danger btn-sm btn-icon"
+                    title="Remove Stock">
+                    <i class="tim-icons icon-simple-delete"></i>
+                  </button>
+                  <button id="saveBtn" type="button" rel="tooltip" class="btn btn-success btn-sm btn-icon"
+                    title="Save Changes">
+                    <i class="tim-icons icon-check-2"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- END KEY STOCK FIGURES DISPLAY -->
+              <br />
+              <!-- KEY MANAGEMENT -->
+              <div class="manage-keys">
+                <div class="keygen mb-5 d-flex flex-column align-items-start">
+                  <label for="">Show active passwords</label>
+                  <input id="toggle-password" checked="true" type="checkbox" data-toggle="toggle-password" />
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Password
+                        <button id="add-pass-btn" type="button" rel="tooltip" class="btn btn-default btn-sm btn-icon"
+                          title="Add Password">
+                          <i class="tim-icons icon-simple-add"></i>
+                        </button>
+                      </th>
+                      <th>Stock</th>
+                      <th>Coupon</th>
+                      <th>Expiration</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody-pass"></tbody>
+                </table>
+              </div>
+              <!-- END KEY MANAGEMENT -->
+              <br />
+              <!-- KEY SENDER -->
+              <!-- <h2>Key Sender</h2>
+                          <div class="key-sender">
+                              <div>
+                                  <label for="">Email:</label>
+                                  <input id="key-send-email" type="text">
+                                  <label for="">Key:</label>
+                                  <input id="key-send-key" type="text" placeholder="XXXXX-XXXXX-XXXXX-XXXXX">
+                                  <button type="button" rel="tooltip" class="btn btn-success"
+                                      title="Only for F&F, Staff or Lifetime Keys!">
+                                      <i class="tim-icons icon-send"></i> Send
+                                  </button>
+                              </div>
+                          </div> -->
+              <!-- END KEY SENDER -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Admin Panel -->
+  </div>
+  <!-- End Main Wrapper -->
+
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Theme JS -->
+  <script src="/assets/js/blk-design-system.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: https://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: https://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!-- Chart JS -->
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+  <script>
+    $(document).ready(function () {
+      blackKit.initDatePicker();
+      blackKit.initSliders();
+    });
+
+    function scrollToDownload() {
+      if ($('.section-download').length != 0) {
+        $('html, body').animate(
+          {
+            scrollTop: $('.section-download').offset().top,
+          },
+          1000
+        );
+      }
+    }
+  </script>
+  <!-- Scroll Animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
+
+<style>
+  .page-header {
+    overflow: auto;
+  }
+</style>
+
+<!-- ***** Data Table ***** -->
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+<!-- ***** Sweet Alert ***** -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<!--   API SERVICES   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js " type="text/javascript"></script>
+<script src="./services/env.js" type="text/javascript"></script>
+<script src="./services/paths.js" type="text/javascript"></script>
+<script src="./services/alerts.js" type="text/javascript"></script>
+<script src="./services/cookieService.js" type="text/javascript"></script>
+<script src="./services/apiService.js" type="text/javascript"></script>
+<script src="./services/main.js" type="text/javascript"></script>
+<!--   END API SERVICES   -->
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<style>
+  table.dataTable tbody tr {
+    background-color: transparent;
+  }
+</style>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>Performing Maintenance</title>
+
+    <!-- Theme CSS -->
+    <link type="text/css" href="./assets/css/blk-design-system.min.css" rel="stylesheet">
+    <link href="./assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="./particles.js"></script>
+
+</head>
+
+<body style="background-color: #171941; color: white;">
+    <div id="particles-js"></div>
+    <div style="  margin-top: 10%;
+    width: 100%;
+    text-align: center;">
+        <div class="text">
+            <div>
+                <img src="https://i.ibb.co/S0YmdbK/Elixir-Clear.png" alt="logo">
+            </div>
+            <h1>Our site is getting a little tune up and some love.</h1>
+            <div>
+                <h2>We apologize for the inconvenience, but we're performing some maintenance. You can still contact us
+                    at
+                    <a style="color: #36F3FF;" href="mailto:support@elixirlabs.xyz">support@elixirlabs.xyz</a>. We'll be
+                    back up soon!</p>
+                    <h2>&mdash; Eddy, Sean, & Kubee from Elixir Labs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ParticlesJS -->
+    <script>
+        particlesJS.load('particles-js', './particles.json', function () {
+            console.log('callback - particles-js config loaded');
+        });
+    </script>
+</body>
+
+<!-- ***** Sweet Alert ***** -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js " type="text/javascript"></script>
+
+<!-- ***** Socket IO ***** -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+<script src="./services/env.js" type="text/javascript"></script>
+<script src="./services/paths.js" type="text/javascript"></script>
+<script src="./services/alerts.js" type="text/javascript"></script>
+<script src="./services/cookieService.js" type="text/javascript"></script>
+<script src="./services/apiService.js" type="text/javascript"></script>
+<script src="./services/under_construction.js" type="text/javascript"></script>
+
+</html>
